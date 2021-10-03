@@ -39,17 +39,16 @@ function showNotes() {
     }
     let html ="";
 
-    notesObj.forEach(function(element , index) {
+     notesObj.forEach(function(element , index) {
        html += `
        <div class="notecard my-2 mx-2 card" style="width: 18rem">
          <div class="card-body">
-           <h5 class="card-title"> ${element.title}</h5>
+           <h3 class="card-title"> ${element.title}</h3>
          <p class="card-text">${element.text} </p>
-         <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
+         <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-dark  btn btn-outline-success">Delete Note</button>
          </div>
          </div> `;    
     });
-
     let elem =document.getElementById("notes");
     if(notesObj.length !=0)
     {
